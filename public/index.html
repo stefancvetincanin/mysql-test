@@ -5,17 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Our little db</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
 </head>
 <body>
   <main>
-    <h1>RADI</h1>
-    <h2>POST</h2>
-    <div id="test"></div>
-    <h2>GET</h2>
+    <h1>Demo stranica - upiti</h1>
+    <h2>GET ZAHTEV - pretraga po JMBG ili prezimenu</h2>
     <input type="text" id="jmbg" placeholder="JMBG"><button id="searchJmbg">Trazi</button>
     <input type="text" id="prezime" placeholder="Prezime"><button id="searchPrezime">Trazi</button>
     <div id="test2"></div>
+    <h2>POST ZAHTEV - Dodaj korisnika</h2>
+    <form id="post-forma">
+      <input type="number" id="post-jmbg" placeholder="JMBG" required min="1000000000000" max="9999999999999">
+      <input type="text" id="post-ime"  placeholder="Ime" required>
+      <input type="text" id="post-prezime"  placeholder="Prezime" required>
+      <input type="text" id="post-adresa"  placeholder="Adresa" required><br>
+      <button id="dodaj-korisnika">Dodaj</button>
+      <p id="post-obavestenje"></p>
+    </form>
+    <h2>GET ZAHTEV - Lista polaznika</h2>
+    <div id="polaznici-container" class="polaznici-container"></div>
+    <h2>DELETE ZAHTEV - Izbrisi polaznika po JMBG</h2>
+    <form id="delete-user-form">
+      <input type="number" id="delete-jmbg" placeholder="JMBG" required min="1000000000000" max="9999999999999"><br>
+      <button id="delete-user">Obrisi</button>
+    </form>
+    
   </main>
   <script src='main.js'></script>
 </body>
